@@ -111,7 +111,7 @@ public class TeacherService {
     @Transactional
     public List<TeacherReadOnlyDTO> getTeachersFiltered(TeacherFilters filters) {
         return teacherRepository.findAll(getSpecsFromFilters(filters))
-                .stream().map(mapper::mapToTeacherReadOnlyDTO).collect(Collectors.toList());
+                 .stream().map(mapper::mapToTeacherReadOnlyDTO).collect(Collectors.toList());
     }
 
     @Transactional
